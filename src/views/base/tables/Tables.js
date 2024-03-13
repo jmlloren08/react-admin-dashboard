@@ -227,7 +227,7 @@ const Tables = () => {
               </CModal>
             </div>
             <DocsExample href="components/table#hoverable-rows">
-              <CTable hover>
+              <CTable hover responsive>
                 <CTableHead>
                   <CTableRow>
                     <CTableHeaderCell scope="col">#</CTableHeaderCell>

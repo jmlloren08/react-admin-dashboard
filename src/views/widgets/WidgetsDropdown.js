@@ -10,7 +10,6 @@ const WidgetsDropdown = () => {
   const fetchBookStats = async () => {
     try {
       const response = await Axios.get('http://localhost:4000/API/Posts/count')
-      console.log(response.data)
       setBookStats(response.data)
     } catch (error) {
       Swal.fire('Error fetching book count', error.message, 'error')
