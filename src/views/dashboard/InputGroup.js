@@ -55,7 +55,7 @@ const Select = () => {
   }, [])
   const fetchUsers = async () => {
     try {
-      const response = await Axios.get('https://react-occ.vercel.app/API/Users')
+      const response = await Axios.get('http://localhost:4000/API/Users')
       setUsers(response.data)
     } catch (error) {
       Swal.fire('Error fetching users', error.message, 'error')
@@ -78,7 +78,7 @@ const Select = () => {
         return
       }
       if (typeof userId === 'undefined') {
-        const response = await Axios.post('https://react-occ.vercel.app/API/Users/register', {
+        const response = await Axios.post('http://localhost:4000/API/Users/register', {
           firstname,
           middlename,
           lastname,
@@ -92,7 +92,7 @@ const Select = () => {
         Swal.fire('Success', 'user has been added successfully', 'success')
         setVisible(false)
       } else {
-        const response = await Axios.put(`https://react-occ.vercel.app/API/Users/${userId}`, {
+        const response = await Axios.put(`http://localhost:4000/API/Users/${userId}`, {
           firstname,
           middlename,
           lastname,
@@ -142,7 +142,7 @@ const Select = () => {
     })
     if (confirmation.isConfirmed) {
       try {
-        await Axios.delete(`https://react-occ.vercel.app/API/Users/${id}`)
+        await Axios.delete(`http://localhost:4000/API/Users/${id}`)
         setUsers(users.filter((user) => user._id !== id))
         Swal.fire('Successful', 'Your user has been deleted', 'success')
       } catch (error) {
