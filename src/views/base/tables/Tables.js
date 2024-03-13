@@ -41,7 +41,7 @@ const Tables = () => {
   }, [])
   const fetchBooks = async () => {
     try {
-      const response = await Axios.get('http://localhost:4000/API/Posts')
+      const response = await Axios.get('https://react-occ.vercel.app/API/Posts')
       setBooks(response.data)
     } catch (error) {
       Swal.fire('Error fetching books', error.message, 'error')
@@ -55,7 +55,7 @@ const Tables = () => {
         return
       }
       if (typeof bookId === 'undefined') {
-        const response = await Axios.post('http://localhost:4000/API/Posts', {
+        const response = await Axios.post('https://react-occ.vercel.app/API/Posts', {
           title,
           author,
           pages,
@@ -66,7 +66,7 @@ const Tables = () => {
         Swal.fire('Success', 'Book has been added successfully', 'success')
         setVisible(false)
       } else {
-        const response = await Axios.put(`http://localhost:4000/API/Posts/${bookId}`, {
+        const response = await Axios.put(`https://react-occ.vercel.app/API/Posts/${bookId}`, {
           title,
           author,
           pages,
@@ -111,7 +111,7 @@ const Tables = () => {
     })
     if (confirmation.isConfirmed) {
       try {
-        await Axios.delete(`http://localhost:4000/API/Posts/${id}`)
+        await Axios.delete(`https://react-occ.vercel.app/API/Posts/${id}`)
         setBooks(books.filter((book) => book._id !== id))
         Swal.fire('Successful', 'Your book has been deleted', 'success')
       } catch (error) {

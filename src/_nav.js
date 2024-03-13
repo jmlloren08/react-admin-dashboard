@@ -17,7 +17,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'User Management',
-    to: '/forms/input-group',
+    to: '/input-group',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
   },
 ]

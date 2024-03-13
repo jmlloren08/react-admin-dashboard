@@ -9,7 +9,7 @@ const Tables = React.lazy(() => import('./views/base/tables/Tables'))
 const Buttons = React.lazy(() => import('./views/buttons/buttons/Buttons'))
 
 //Forms
-const InputGroup = React.lazy(() => import('./views/forms/input-group/InputGroup'))
+const InputGroup = React.lazy(() => import('./views/dashboard/InputGroup'))
 
 const Charts = React.lazy(() => import('./views/charts/Charts'))
 
@@ -27,7 +27,7 @@ const routes = [
   { path: '/base/tables', name: 'Tables', element: Tables },
   { path: '/buttons', name: 'Buttons', element: Buttons, exact: true },
   { path: '/charts', name: 'Charts', element: Charts },
-  { path: '/forms/input-group', name: 'Input Group', element: InputGroup },
+  { path: '/dashboard', name: 'Input Group', element: InputGroup },
   { path: '/icons', exact: true, name: 'Icons', element: CoreUIIcons },
   { path: '/icons/coreui-icons', name: 'CoreUI Icons', element: CoreUIIcons },
   { path: '/notifications/modals', name: 'Modals', element: Modals },
