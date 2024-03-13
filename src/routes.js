@@ -11,8 +11,6 @@ const Buttons = React.lazy(() => import('./views/buttons/buttons/Buttons'))
 //Forms
 const InputGroup = React.lazy(() => import('./views/dashboard/InputGroup'))
 
-const Charts = React.lazy(() => import('./views/charts/Charts'))
-
 // Icons
 const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'))
 
@@ -26,7 +24,6 @@ const routes = [
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/base/tables', name: 'Tables', element: Tables },
   { path: '/buttons', name: 'Buttons', element: Buttons, exact: true },
-  { path: '/charts', name: 'Charts', element: Charts },
   { path: '/dashboard', name: 'Input Group', element: InputGroup },
   { path: '/icons', exact: true, name: 'Icons', element: CoreUIIcons },
   { path: '/icons/coreui-icons', name: 'CoreUI Icons', element: CoreUIIcons },
